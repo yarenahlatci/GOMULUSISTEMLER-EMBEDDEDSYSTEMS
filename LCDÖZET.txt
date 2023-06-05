@@ -1,0 +1,40 @@
+
+/*
+LCD BAĞLANTI;
+GND = TOPRAK HATTI - GND (-)
+VCC = 5V GERİLİM HATTI 
+V0 = POTANSİYOMETRENİN ORTA BACAĞINA BAĞLANDI
+RS = 12.PİN
+RW = GND (-) HATTI
+E = 11.PİN
+DB0 - DB1 - DB2 -DB3 = KULLANILMIYOR
+DB4 = 5.PİN
+DB5 = 4.PİN
+DB6 = 3.PİN
+DB7 = 2.PİN
+LED ANOT = RESİZTÖR
+LED KATOT = GND (-) HATTINA
+
+KOD;
+#include<LiquidCrystal.h> = LCD KÜTÜPHANESİ
+LiquidCrystal lcd(12,11,5,4,3,2) = LCD EKRANIN PİNLERİ
+begin(cols, rows): LCD'nin satır ve sütun sayısını belirlemek için kullanılır. Örneğin, lcd.begin(16, 2); komutu, 16 sütun ve 2 satırlı bir LCD ekranın başlatılmasını sağlar.
+lcd.print() = LCD'nin ekranına yazı yazarız.Eğer string ifade yazarsak "" içine yazılır. Eğer sayı yazdıracaksak çift tırnağa gerek yok.
+lcd.clear() = LCD'nin ekranını temizler
+lcd.home() = İmleci sol üst köşeye yerleştirir.LCD ekranın imlecinin başlangıç pozisyonuna (0, 0 koordinatlarına) dönmesini sağlar.cols = sutün,rows = satır
+lcd.setCursor(cols, row): İmlecin LCD ekran üzerindeki konumunu belirlemek için kullanılır. İmleç, belirtilen sütun ve satır konumuna taşınır. Örneğin, lcd.setCursor(0, 0); imleci ilk sütunun ilk satırına taşır.
+lcd.print(100,DEC); 100 sayısını onluk sistemde yaz
+lcd.print(100,BIN); 100 sayısını ikilik sistemde yaz
+lcd.print(100,HEX); 100 sayısını onaltılık sistemde yaz
+lcd.print(100,OCT); 100 sayısını sekizlik sistemde yaz
+lcd.cursor(); İmlec en sonda görünür halde olur. Örneğin, Merhaba_ en sonda _ işareti imlecimiz olur ve o hep görünür halde olur
+lcd.noCursor(): İmleci gizlemek için kullanılır. İmleç, LCD ekran üzerinde görünmez hale gelir.
+lcd.display(): LCD ekranın görüntüsünü açmak için kullanılır. Eğer lcd.noDisplay() kullanıldıysa, bu fonksiyonu kullanarak ekrandaki veriyi yeniden görüntüleyebilirsiniz.
+lcd.noDisplay : Ekrandaki görüntüyü kapatır.
+lcd.scrollDisplayLeft(): LCD ekranı sola doğru kaydırmak için kullanılır. İmleç yerinde kalırken, ekran içeriği sola doğru kayar.
+lcd.scrollDisplayRight(): LCD ekranı sağa doğru kaydırmak için kullanılır. İmleç yerinde kalırken, ekran içeriği sağa doğru kayar.
+lcd.autoscroll() : Karakter boyutuna(sayısına) göre ekranı kaydırır.LCD ekranın otomatik kaydırma moduna geçmesini sağlar. Yazı yazdıkça ekran içeriği otomatik olarak kayar.
+lcd.noAutoscroll(): Otomatik kaydırma modunu kapatır ve ekran içeriğinin sabit kalmasını sağlar.
+lcd.righttoLeft() = Metni sağdan sola yazar.
+lcd.lefttoRight() = Metni soldan sağa yazar.
+*/
